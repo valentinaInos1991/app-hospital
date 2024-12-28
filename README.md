@@ -1,5 +1,21 @@
 *Aplicación REACT Hospital Cordis*
 ------------------------------------------------
+* Ejercicio Práctico 2
+1. Manejo del DOM virtual en ReactJs
+En el componente DoctorList se implementó una sección donde se gestiona eficientemente el uso del DOM Virtual con un listado de doctores en donde se actualiza solo si se agrega un doctor nuevo y no se vuelven a cargar los que ya estaban agregados, haciendo más eficiente la renderización de los datos.
+
+2. Explica cómo ReactJS utiliza el DOM virtual para mejorar el rendimiento de la interfaz del hospital (secciones como listado de doctores o servicios).
+Por ejemplo en un listado de doctores que se actualiza al cargar nuevos datos. Si trabajáramos directamente con el DOM, cada vez que llega un doctor nuevo:
+*Reactualizaríamos toda la lista, incluso los elementos que no han cambiado.*
+*Esto causaría un retraso visual notable, especialmente en listas grandes.*
+Con el DOM Virtual:
+* React detecta qué doctor nuevo debe ser agregado al DOM.
+* Solo actualiza ese elemento específico.
+* Esto reduce el tiempo de re-renderizado, haciendo la interfaz más rápida y fluida.
+
+2. Implementa componentDidMount o el uso de useEffect para gestionar la actualización del DOM al cargar los datos.
+En el component DoctorList se usó useEffect para gestionar la actualización del DOM al cargar los datos de la lista de doctores.
+
 
 1. Manejo de Estado con useState
 Se utilizó el hook useState para manejar el estado local del formulario, como el nombre del paciente, la fecha de la cita y el doctor seleccionado.

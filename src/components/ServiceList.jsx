@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const ServiceList=({servicios}) => {
     return (
@@ -12,5 +13,9 @@ const ServiceList=({servicios}) => {
         </div>
     )
 }
+
+ServiceList.propTypes = {
+    servicios: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
 
 export default ServiceList;

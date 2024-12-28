@@ -102,3 +102,13 @@ button {
 button:hover {
   background-color: #1490c8;
 }
+
+.doctor-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.doctor-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}

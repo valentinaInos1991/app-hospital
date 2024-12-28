@@ -1,29 +1,29 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef } from "react";
 
-const AppointmentForm = ({ doctorInicial }) => {
-  // Estado para manejar los datos del formulario
+const AppointmentForm = () => {
   const [formData, setFormData] = useState({
     nombre: "",
     fecha: "",
-    doctor: doctorInicial || "", // Usa doctorInicial como valor inicial
+    doctor: "",
   });
 
-  // Efecto para actualizar el estado si cambia doctorInicial
-  useEffect(() => {
-    setFormData((prevData) => ({ ...prevData, doctor: doctorInicial }));
-  }, [doctorInicial]);
+  // Crea una referencia para el campo de "nombre"
+  const nameInputRef = useRef(null);
 
-  // Manejo de cambios en los inputs
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  // Manejo del envío del formulario
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Cita Agendada", formData);
     alert("Cita Agendada Correctamente");
+  };
+
+  // Función para enfocar el campo de nombre
+  const focusNameField = () => {
+    nameInputRef.current.focus();
   };
 
   return (
@@ -36,6 +36,7 @@ const AppointmentForm = ({ doctorInicial }) => {
           name="nombre"
           value={formData.nombre}
           onChange={handleChange}
+          ref={nameInputRef} // Asocia la referencia al campo
           required
         />
       </label>
@@ -60,11 +61,11 @@ const AppointmentForm = ({ doctorInicial }) => {
         />
       </label>
       <button type="submit">Agendar</button>
+      <button type="button" onClick={focusNameField}>
+        Enfocar Nombre
+      </button>
     </form>
   );
 };
 
 export default AppointmentForm;
-
-
-      
