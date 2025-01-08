@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import React, { useContext, memo } from "react";
 import { HospitalContext } from "../HospitalContext";
 import withCounter from "../hoc/withCounter";
 
-const DoctorCard = ({ count, incrementCount }) => {
+const DoctorCard = memo(({ count, incrementCount }) => {
   const { doctors } = useContext(HospitalContext);
 
   return (
@@ -17,7 +17,7 @@ const DoctorCard = ({ count, incrementCount }) => {
       <p>Clicks en doctores: {count}</p>
     </div>
   );
-};
+});
 
 export default withCounter(DoctorCard);
 
