@@ -1,5 +1,27 @@
 *Aplicación REACT Hospital Cordis*
 ------------------------------------------------
+* Ejercicio Práctico 1- Módulo 5 (Consumo de Apis en el proyecto del hospital)
+¿Por qué elegí Axios?
+He elegido Axios para realizar las peticiones a la API debido a las siguientes razones:
+
+*Simplicidad y Eficiencia:*
+Axios ofrece una sintaxis clara y fácil de usar, lo que permite realizar peticiones HTTP con menos esfuerzo y un código más legible en comparación con fetch.
+
+*Compatibilidad con Promesas y Async/Await:*
+Soporta de forma nativa promesas, lo que lo hace perfecto para trabajar con async/await, mejorando la legibilidad y manejabilidad del código asíncrono.
+
+*Manejo de Errores Integrado:*
+Axios facilita el manejo de errores ya que incluye herramientas para detectar rápidamente fallos en las peticiones o respuestas sin la necesidad de comprobar manualmente el estado HTTP.
+
+*Soporte para Configuración Global:*
+Permite establecer configuraciones globales, como la URL base de la API o encabezados comunes, optimizando el manejo de múltiples peticiones.
+
+*Transformación Automática de Datos:*
+Axios transforma automáticamente los datos enviados y recibidos en formato JSON, reduciendo la necesidad de configuraciones adicionales.
+
+*Cancelación de Peticiones:*
+Proporciona soporte para cancelar peticiones en curso, lo cual es útil en aplicaciones con componentes dinámicos o dependientes de estados.
+
 * Ejercicio Práctico 2
 1. Manejo del DOM virtual en ReactJs
 En el componente DoctorList se implementó una sección donde se gestiona eficientemente el uso del DOM Virtual con un listado de doctores en donde se actualiza solo si se agrega un doctor nuevo y no se vuelven a cargar los que ya estaban agregados, haciendo más eficiente la renderización de los datos.

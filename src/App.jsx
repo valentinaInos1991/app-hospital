@@ -5,6 +5,7 @@ import Appointments from "./views/Appointments";
 import EquipoMedico from "./views/EquipoMedico";
 import Servicios from "./views/Servicios";
 import logo from "./assets/logo-horizontal.png";
+import DoctorList from "./components/DoctorList";
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
             <li><Link to="/citas">Citas</Link></li>
           </ul>
         </nav>
+        <div>
+      <DoctorList />
+    </div>
 
         {/* Configuración de Rutas */}
         <Routes>
